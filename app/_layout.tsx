@@ -7,7 +7,9 @@ export default function RootLayout() {
     'outfit-medium':require('./../assets/fonts/Outfit-Medium.ttf'),
     'outfit-bold':require('./../assets/fonts/Outfit-Bold.ttf')
   })
-  return( <Stack>
+  return( <Stack screenOptions={{
+    headerShown:false
+  }}>
     {/*<Stack.Screen name="index" options={{headerShown:false}}/>
   </Stack>*/}
   <Stack.Screen name="(tabs)"/>
