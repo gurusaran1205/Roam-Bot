@@ -1,7 +1,13 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Entypo from '@expo/vector-icons/Entypo';
+import { useRouter } from 'expo-router';
 export default function StartNewTripCard() {
+
+    const router = useRouter();
+
+
+
   return (
     <View
     style={{
@@ -29,7 +35,9 @@ export default function StartNewTripCard() {
         Looks like it's time to plan a new travel experience! Get Ready to Experience the massive Suggestion from Us for your memorable plan 
     </Text>
 
-    <TouchableOpacity style={{
+    <TouchableOpacity 
+    onPress={()=>router.push('/search-place')}
+    style={{
             padding:10,
             backgroundColor:'black',
             borderRadius:15,
